@@ -1,0 +1,40 @@
+.profile-page {
+  display: grid;
+  place-items: center;
+}
+
+.profile-card {
+  width: min(100%, 700px);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(124, 74, 47, 0.08);
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.profile-content p {
+  color: var(--muted);
+}
+
+.profile-actions {
+  margin-top: 1.7rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.profile-actions .outline-btn,
+.profile-actions .primary-btn {
+  display: inline-flex;
+}
