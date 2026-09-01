@@ -1,6 +1,32 @@
+.catalogue-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.catalogue-page::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  top: 1rem;
+  right: -8rem;
+  border-radius: 50%;
+  background: rgba(211, 154, 106, 0.12);
+  filter: blur(2px);
+}
+
 .catalogue-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1.5rem;
 }
+
+.catalogue-title { display: flex; align-items: center; gap: 0.8rem; }
+.catalogue-title-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--primary-dark); color: #fffaf3; box-shadow: 0 10px 20px rgba(91, 53, 35, 0.18); }
+.catalogue-note { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.65rem 0.8rem; border: 1px solid var(--border); border-radius: 999px; background: rgba(255, 255, 255, 0.55); color: var(--primary); font: 700 0.78rem 'Trebuchet MS', Arial, sans-serif; }
 
 .catalogue-header h1 {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
@@ -209,6 +235,7 @@
 }
 
 @media (max-width: 760px) {
+  .catalogue-header { align-items: start; flex-direction: column; }
   .catalogue-controls {
     grid-template-columns: 1fr;
   }

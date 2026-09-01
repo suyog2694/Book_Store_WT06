@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Minus, Plus, Trash2 } from "lucide-react";
+import { LockKeyhole, Minus, Plus, ShoppingBag, Trash2, Truck } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { checkoutCart } from "../services/orderService";
@@ -56,6 +56,7 @@ const Cart = () => {
   if (!cartItems.length) {
     return (
       <main className="container cart-page empty-cart">
+        <ShoppingBag size={42} className="empty-cart-icon" />
         <h1>Your cart is empty.</h1>
 
         <p>
@@ -80,7 +81,8 @@ const Cart = () => {
           Your cart
         </span>
 
-        <h2>Ready to checkout</h2>
+        <h2><ShoppingBag size={25} /> Ready to checkout</h2>
+        <div className="cart-trust-row"><span><Truck size={16} /> Free delivery</span><span><LockKeyhole size={16} /> Secure checkout</span></div>
       </div>
 
       <div className="cart-layout">
@@ -98,12 +100,12 @@ const Cart = () => {
               <img
                 src={
                   item.image_url ||
-                  "/images/books/placeholder.jpg"
+                  "/images/books/placeholder.svg"
                 }
                 alt={item.title}
                 onError={(e) => {
                   e.currentTarget.src =
-                    "/images/books/placeholder.jpg";
+                    "/images/books/placeholder.svg";
                 }}
               />
 

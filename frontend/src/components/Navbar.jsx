@@ -46,6 +46,7 @@ const Navbar = () => {
             <NavLink key={to} to={to} className="nav-link" end={to === '/'}>
               <Icon size={16} />
               <span>{label}</span>
+              {to === '/cart' && totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
             </NavLink>
           ))}
 
@@ -56,13 +57,6 @@ const Navbar = () => {
             </button>
           )}
 
-          {isAuthenticated && (
-            <NavLink to="/cart" className="nav-link cart-pill" aria-label="Cart">
-              <ShoppingCart size={16} />
-              <span>Cart</span>
-              {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
-            </NavLink>
-          )}
         </div>
 
         <button

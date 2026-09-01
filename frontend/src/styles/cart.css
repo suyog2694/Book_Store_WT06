@@ -1,5 +1,19 @@
 .cart-page {
   min-height: 60vh;
+  position: relative;
+  isolation: isolate;
+}
+
+.cart-page::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 320px;
+  height: 320px;
+  top: 0;
+  left: -12rem;
+  border-radius: 50%;
+  background: rgba(49, 83, 91, 0.09);
 }
 
 .empty-cart {
@@ -9,6 +23,11 @@
   gap: 1rem;
   padding: 4rem 1rem;
 }
+
+.empty-cart-icon { margin: 0 auto; color: var(--primary); }
+.section-heading h2 { display: flex; align-items: center; gap: 0.55rem; }
+.cart-trust-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.9rem; color: var(--muted); font: 700 0.78rem 'Trebuchet MS', Arial, sans-serif; }
+.cart-trust-row span { display: inline-flex; align-items: center; gap: 0.35rem; }
 
 .cart-layout {
   display: grid;

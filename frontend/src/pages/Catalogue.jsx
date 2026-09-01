@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Search } from 'lucide-react';
+import { BookOpen, Search, Sparkles } from 'lucide-react';
 import BookCard from '../components/BookCard';
 import BookDetails from '../components/BookDetails';
 import Loading from '../components/Loading';
@@ -91,13 +91,17 @@ const Catalogue = () => {
     <main className="catalogue-page container section-block">
 
       <div className="catalogue-header">
-        <div>
+        <div className="catalogue-title">
+          <div className="catalogue-title-icon"><BookOpen size={25} /></div>
+          <div>
           <span className="eyebrow accent">
             Catalogue
           </span>
 
           <h1>Find your perfect read</h1>
+          </div>
         </div>
+        <div className="catalogue-note"><Sparkles size={17} /><span>Fresh picks for curious minds</span></div>
       </div>
 
       <div className="catalogue-controls">

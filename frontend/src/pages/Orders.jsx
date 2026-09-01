@@ -5,6 +5,7 @@ import {
   ChevronDown,
   ChevronUp,
   Clock3,
+  BookOpen,
 } from "lucide-react";
 import { getOrders } from "../services/orderService";
 import Loading from "../components/Loading";
@@ -95,6 +96,7 @@ const Orders = () => {
                 {orders.length === 1 ? "Order" : "Orders"}
               </span>
             </div>
+            <div className="orders-trust"><BookOpen size={16} /> Every order opens a new chapter</div>
           </div>
 
           <div className="orders-hero-decoration">
@@ -240,12 +242,12 @@ const Orders = () => {
                               <img
                                 src={
                                   item.image_url ||
-                                  "/images/books/placeholder.jpg"
+                                  "/images/books/placeholder.svg"
                                 }
                                 alt={item.title}
                                 onError={(e) => {
                                   e.currentTarget.src =
-                                    "/images/books/placeholder.jpg";
+                                    "/images/books/placeholder.svg";
                                 }}
                               />
                             </div>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 760" role="img" aria-labelledby="title desc">
+  <title id="title">MyBooks colorful book cover</title>
+  <desc id="desc">A colorful abstract book cover with layered shapes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#31535b"/>
+      <stop offset="0.52" stop-color="#a64d3c"/>
+      <stop offset="1" stop-color="#e5ae62"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="760" fill="url(#bg)"/>
+  <circle cx="470" cy="130" r="150" fill="#f7dfb7" opacity=".25"/>
+  <circle cx="90" cy="650" r="190" fill="#202d34" opacity=".3"/>
+  <path d="M0 465 C170 370 270 580 600 390 L600 760 L0 760Z" fill="#e9c276" opacity=".5"/>
+  <rect x="58" y="58" width="484" height="644" fill="none" stroke="#fff7eb" stroke-width="3" opacity=".75"/>
+  <text x="88" y="165" fill="#fff7eb" font-family="Georgia, serif" font-size="28" letter-spacing="6">MYBOOKS</text>
+  <text x="88" y="510" fill="#fff7eb" font-family="Georgia, serif" font-size="58" font-weight="bold">A NEW</text>
+  <text x="88" y="575" fill="#fff7eb" font-family="Georgia, serif" font-size="58" font-weight="bold">CHAPTER</text>
+  <text x="88" y="650" fill="#fff7eb" font-family="Arial, sans-serif" font-size="17" letter-spacing="3">OPEN SOMETHING GOOD</text>
+</svg>

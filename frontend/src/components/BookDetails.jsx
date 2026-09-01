@@ -36,8 +36,8 @@ const BookDetails = ({ book, onClose }) => {
           <X size={18} />
         </button>
         <div className="details-content">
-          <img src={book.image_url || '/images/books/placeholder.jpg'} alt={book.title} onError={(e) => {
-            e.currentTarget.src = '/images/books/placeholder.jpg';
+          <img src={book.image_url || '/images/books/placeholder.svg'} alt={book.title} onError={(e) => {
+            e.currentTarget.src = '/images/books/placeholder.svg';
           }} />
           <div className="details-copy">
             <span className="book-category">{book.category}</span>

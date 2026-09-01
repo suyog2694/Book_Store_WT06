@@ -54,7 +54,7 @@ const BookCard = ({ book, onViewDetails }) => {
   };
 
   const imageSource =
-    book.image_url || "/images/books/placeholder.jpg";
+    book.image_url || "/images/books/placeholder.svg";
 
   return (
     <article className="book-card" onClick={() => onViewDetails?.()} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onViewDetails?.(); } }} tabIndex={0} role="button" aria-label={`View details for ${book.title}`}>
@@ -64,7 +64,7 @@ const BookCard = ({ book, onViewDetails }) => {
           alt={book.title}
           onError={(e) => {
             e.currentTarget.src =
-              "/images/books/placeholder.jpg";
+              "/images/books/placeholder.svg";
           }}
         />
       </div>

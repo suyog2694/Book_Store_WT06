@@ -62,13 +62,13 @@ const Register = () => {
 
   return (
     <main className="auth-page">
-      <div className="auth-card">
+      <div className="auth-card register-card">
         <div className="auth-header">
           <span className="eyebrow accent">Create account</span>
           <h2>Register with MyBooks</h2>
         </div>
 
-        <form onSubmit={handleSubmit} className="auth-form">
+        <form onSubmit={handleSubmit} className="auth-form register-form">
           <label>
             <span>Full Name</span>
             <input name="name" value={form.name} onChange={handleChange} placeholder="Your full name" />

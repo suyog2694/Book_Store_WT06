@@ -10,7 +10,8 @@
       rgba(126, 74, 39, 0.035),
       transparent 25%
     ),
-    #faf8f5;
+    radial-gradient(circle at 8% 30%, rgba(211, 154, 106, 0.12), transparent 28%),
+    linear-gradient(180deg, #fbf7ef 0%, #f1ece4 100%);
   padding: 0;
 }
 
@@ -752,3 +753,5 @@
     gap: 14px;
   }
 }
+
+.orders-trust { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; color: #7b4a2d; font-size: 14px; font-weight: 600; }
