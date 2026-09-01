@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ShoppingCart, Eye } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import { createOrder } from "../services/orderService";
@@ -57,7 +57,7 @@ const BookCard = ({ book, onViewDetails }) => {
     book.image_url || "/images/books/placeholder.jpg";
 
   return (
-    <article className="book-card">
+    <article className="book-card" onClick={() => onViewDetails?.()} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onViewDetails?.(); } }} tabIndex={0} role="button" aria-label={`View details for ${book.title}`}>
       <div className="book-image-box">
         <img
           src={imageSource}
@@ -80,26 +80,12 @@ const BookCard = ({ book, onViewDetails }) => {
           {book.author}
         </p>
 
-        <div className="price-row">
-          <strong>
-            ₹{Number(book.mrp).toFixed(2)}
-          </strong>
-        </div>
-
         <div className="card-actions">
-          <button
-            type="button"
-            className="outline-btn small-btn"
-            onClick={onViewDetails || (() => {})}
-          >
-            <Eye size={16} />
-            View Details
-          </button>
-
+          <strong className="card-price">₹{Number(book.mrp).toFixed(2)}</strong>
           <button
             type="button"
             className="primary-btn small-btn"
-            onClick={handleAddToCart}
+            onClick={(event) => { event.stopPropagation(); handleAddToCart(); }}
           >
             <ShoppingCart size={16} />
             Add to Cart
@@ -108,7 +94,7 @@ const BookCard = ({ book, onViewDetails }) => {
           <button
             type="button"
             className="outline-btn small-btn"
-            onClick={handleBuyNow}
+            onClick={(event) => { event.stopPropagation(); handleBuyNow(); }}
           >
             Buy Now
           </button>

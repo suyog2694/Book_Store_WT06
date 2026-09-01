@@ -25,11 +25,13 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #f9f6f1 0%, #f4efe8 100%);
+  font-family: Georgia, 'Times New Roman', serif;
+  background: radial-gradient(circle at 12% 8%, rgba(242, 200, 146, 0.2), transparent 28rem), radial-gradient(circle at 88% 42%, rgba(49, 83, 91, 0.08), transparent 30rem), linear-gradient(180deg, #fbf7ef 0%, #f1ece4 100%);
   color: var(--text);
   line-height: 1.6;
 }
+
+button, input, select { font-family: 'Trebuchet MS', Arial, sans-serif; }
 
 img {
   max-width: 100%;
@@ -67,6 +69,9 @@ button {
 .app-shell {
   position: relative;
 }
+
+.brand-copy { display: flex; flex-direction: column; line-height: 1.05; gap: 0.25rem; }
+.developer-mark { display: block; color: var(--muted); font: 0.58rem 'Trebuchet MS', Arial, sans-serif; letter-spacing: 0.02em; }
 
 .eyebrow {
   display: inline-block;
@@ -119,6 +124,24 @@ button {
 .section-block {
   padding: 3.5rem 0;
 }
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 3.5rem;
+  background: #282d2a;
+  color: #f8f0e4;
+}
+.footer-grid { display: grid; grid-template-columns: 1.5fr 0.8fr 1.1fr 1.2fr; gap: 2rem; padding-bottom: 3rem; }
+.footer-logo { display: inline-flex; align-items: center; gap: 0.65rem; color: #fffaf3; font-size: 1.3rem; font-weight: 800; }
+.footer-brand > p, .footer-support { max-width: 270px; margin-top: 1rem; color: #c4c1b9; font-size: 0.9rem; }
+.footer h4 { margin-bottom: 1rem; color: #fffaf3; font-family: 'Trebuchet MS', Arial, sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.footer ul { list-style: none; display: grid; gap: 0.65rem; color: #c4c1b9; font-size: 0.9rem; }
+.footer li { display: flex; align-items: center; gap: 0.45rem; }
+.footer li a:hover, .footer-contact:hover { color: #f2c892; }
+.footer-socials { display: flex; gap: 0.5rem; margin-top: 1.3rem; }
+.footer-socials a { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #68706a; border-radius: 50%; color: #f8f0e4; }
+.footer-contact { margin-top: 1.2rem; color: #f2c892; font-size: 0.9rem; }
+.footer-bottom { border-top: 1px solid #48504a; padding: 1.2rem 1rem; text-align: center; color: #a5aaa3; font: 0.75rem 'Trebuchet MS', Arial, sans-serif; }
 
 .section-heading {
   margin-bottom: 1.8rem;
@@ -191,6 +214,8 @@ button {
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -207,4 +232,6 @@ button {
   .page-shell {
     min-height: auto;
   }
+
+  .footer-grid { grid-template-columns: 1fr; }
 }

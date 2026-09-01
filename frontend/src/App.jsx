@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import DeveloperMark from './components/DeveloperMark';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -55,7 +54,6 @@ function App() {
               </Routes>
             </main>
             <Footer />
-            <DeveloperMark />
           </div>
         </Router>
       </CartProvider>

@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { Menu, X, ShoppingCart, User, LogOut, BookOpen, Home, ListOrdered } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
+import DeveloperMark from './DeveloperMark';
 import '../styles/navbar.css';
 
 const Navbar = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
       <nav className="navbar container">
         <Link to="/" className="nav-brand" aria-label="MyBooks home">
           <span className="brand-mark">M</span>
-          <span>MyBooks</span>
+          <span className="brand-copy"><span>MyBooks</span><DeveloperMark /></span>
         </Link>
 
         <div className="nav-links desktop-nav">

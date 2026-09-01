@@ -1,5 +1,5 @@
 const DeveloperMark = () => {
-  return <div className="developer-mark">© Suyog Marathe-01</div>;
+  return <small className="developer-mark">© Suyog Marathe-01</small>;
 };
 
 export default DeveloperMark;
